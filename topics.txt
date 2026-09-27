@@ -1,0 +1,21 @@
+
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+################ Order-service ########################
+
+oreder-created-topic
+
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic order-created-topic
+
+########################### Inventory service #############################
+
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic inventory-failed --from-beginning
+
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic inventory-reserved --from-beginning
+
+################################ Payment Srevice ###########################
+
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic payment-success --from-beginning
+
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic payment-failed --from-beginning
+
+
