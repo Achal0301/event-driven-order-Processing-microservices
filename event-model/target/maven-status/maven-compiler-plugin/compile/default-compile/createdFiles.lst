@@ -1,0 +1,3 @@
+com\achal\events\InventoryEvent.class
+com\achal\events\PaymentEvent.class
+com\achal\events\OrderCreatedEvent.class
